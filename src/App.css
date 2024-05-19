@@ -1,7 +1,23 @@
+:root {
+  --primary-color: #f4f4f4;
+  --secondary-color: #333;
+  --text-color: #fff;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+main {
+  text-align: center;
+  display: grid;
+  grid-template-rows: 1fr 3fr auto;
+  height: 100vh;
+}
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
     padding: 1rem 0;
     text-align: center;
 }
@@ -17,7 +33,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #fff;
+    color: var(--text-color);
     text-decoration: none;
 }
 
@@ -51,12 +67,9 @@ ul {
 
 
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
     width: 100%;
-    background-color: #333;
-    color: #fff;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
     text-align: center;
     padding: 10px 0;
     width: 100%;

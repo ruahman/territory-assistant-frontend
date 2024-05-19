@@ -1,4 +1,3 @@
-import './Home.css';
 
 export function Home() {
   return (
@@ -8,8 +7,8 @@ export function Home() {
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
+                <li><a href="#how_it_works">How it works</a></li>
+                <li><a href="#help">Help</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <button>Log In</button>
             </ul>
@@ -18,7 +17,7 @@ export function Home() {
 
     <section id="home">
         <h2>Welcome</h2>
-        <p>This is the terretory assistant app for the Puerto Rico North West congregation.</p>
+        <p>This is the territory assistant for the PR North West congregation.</p>
     </section>
 
     <footer>

@@ -3,6 +3,6 @@ import { render } from 'solid-js/web'
 
 import { App } from './App'
 
-const root = document.getElementById('root')
+const main = document.querySelector('main')
 
-render(() => <App />, root!)
+render(() => <App />, main!)
