@@ -1,13 +1,19 @@
+type MainLayoutProps = {
+  title: string 
+  links: string[]
+  main: string
+  footer: string
+}
 
-export function Home() {
+export default function (props: MainLayoutProps) {
   return (
     <>
     <header>
-        <h1>Puerto Rico North West Territory Assistant</h1>
+        <h1>{props.title}</h1>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#how_it_works">How it works</a></li>
+                <li><a href="#tutorials">Tutorials</a></li>
                 <li><a href="#help">Help</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <button>Log In</button>

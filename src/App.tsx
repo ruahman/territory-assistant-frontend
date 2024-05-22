@@ -7,3 +7,9 @@ export function App() {
   )
 }
 
+export function LandingPage() {
+  return (
+    <Home />
+  )
+}
+
