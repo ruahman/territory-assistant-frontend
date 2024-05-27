@@ -1,13 +1,18 @@
 import Landing from '@src/screens/landing';
-import './App.css';
-
-// export function App() {
-//   return (
-//     <Home />
-//   )
-// }
 
 export function LandingPage() {
+  return (
+    <Landing />
+  )
+}
+
+export function AdminPage() {
+  return (
+    <Landing />
+  )
+}
+
+export function PublisherPage() {
   return (
     <Landing />
   )

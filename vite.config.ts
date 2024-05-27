@@ -4,6 +4,9 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [solid()],
+  build: {
+    sourcemap: 'inline',
+  },
   resolve: {
     alias: {
       '@src': path.resolve(__dirname, './src'),

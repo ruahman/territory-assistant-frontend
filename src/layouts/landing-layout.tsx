@@ -1,8 +1,8 @@
+
+import '@src/layouts/landing-layout.css'
+
 type MainLayoutProps = {
   title: string 
-  links: string[]
-  main: string
-  footer: string
 }
 
 export default function (props: MainLayoutProps) {
