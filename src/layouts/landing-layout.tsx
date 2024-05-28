@@ -3,6 +3,7 @@ import '@src/layouts/landing-layout.css'
 
 type MainLayoutProps = {
   title: string 
+  brand: string
 }
 
 export default function (props: MainLayoutProps) {
@@ -10,14 +11,22 @@ export default function (props: MainLayoutProps) {
     <>
     <header>
         <h1>{props.title}</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#tutorials">Tutorials</a></li>
-                <li><a href="#help">Help</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <button>Log In</button>
-            </ul>
+        <nav class="navbar">
+            <div class="brand-title">{props.brand}</div>
+            <a href="#" class="toogle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#tutorials">Tutorials</a></li>
+                    <li><a href="#help">Help</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <button>Log In</button>
+                </ul>
+            </div>
         </nav>
     </header>
 
