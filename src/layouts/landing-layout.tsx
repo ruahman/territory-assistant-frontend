@@ -10,14 +10,14 @@ export default function (props: MainLayoutProps) {
   return (
     <>
     <header>
-        <h1>{props.title}</h1>
+        <h1 class="title">{props.title}</h1>
         <nav class="navbar">
-            <div class="brand-title">{props.brand}</div>
             <a href="#" class="toogle-button">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
             </a>
+            <div class="brand">{props.brand}</div>
             <div class="navbar-links">
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -29,11 +29,13 @@ export default function (props: MainLayoutProps) {
             </div>
         </nav>
     </header>
-
-    <section id="home">
-        <h2>Welcome</h2>
-        <p>This is the territory assistant for the PR North West congregation.</p>
-    </section>
+    
+    <main>
+        <section id="home">
+            <h2>Welcome</h2>
+            <p>This is the territory assistant for the PR North West congregation.</p>
+        </section>
+    </main>
 
     <footer>
         <h2>Our Team</h2>

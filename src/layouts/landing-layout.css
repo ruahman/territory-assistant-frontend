@@ -22,37 +22,16 @@ header {
   text-align: center;
 }
 
-/* header nav ul { */
-/*   list-style: none; */
-/* } */
-
-/* header nav ul li { */
-/*   display: inline; */
-/*   margin: 0 10px; */
-/* } */
-
-/* header nav ul li a { */
-/*   color: var(--text-color); */
-/*   text-decoration: none; */
-/* } */
-
-/* header nav a:hover { */
-/*   background-color: #ddd; */
-/*   color: black; */
-/* } */
-        
-/* header nav a.active { */
-/*   background-color: #4CAF50; */
-/*   color: white; */
-/* } */
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
 }
 
-.brand-title {
+.brand {
+  display: none;
   font-size: 1.5rem;
   margin: 0.5rem;
 }
@@ -61,6 +40,7 @@ header {
   margin: 0; 
   padding: 0;
   display: flex;
+  flex-direction: row;
 }
 
 .navbar-links li {
@@ -79,18 +59,17 @@ header {
 }
 
 .toogle-button {
-  /* position: absolute; */
-  /* top: 0.75rem; */
-  /* right: 1rem; */
-  /* display: none; */
-  /* flex-direction: column; */
-  /* justify-content: space-between; */
-  /* width: 30px; */
-  /* height: 21px; */
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 3rem;
+  height: 2rem;
 }
 
 .toogle-button .bar {
-  display: inline-block;
   height: 3px;
   width: 100%;
   background-color: var(--text-color);
@@ -123,6 +102,27 @@ footer {
   text-align: center;
   padding: 10px 0;
   width: 100%;
+}
+
+@media (max-width: 700px) {
+  .title {
+    display: none;
+  }
+  .brand {
+    display: block;
+  }
+  .navbar {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 400px) {
+  .toogle-button {
+    display: flex;
+  }
+  .navbar-links {
+    display: none;
+  }
 }
 
 
