@@ -1,4 +1,4 @@
-
+import {createSignal} from 'solid-js'
 import '@src/layouts/landing-layout.css'
 
 type MainLayoutProps = {
@@ -7,18 +7,26 @@ type MainLayoutProps = {
 }
 
 export default function (props: MainLayoutProps) {
+
+  const [active, setActive] = createSignal(false)
+
+  const handleToggle = () => {
+    setActive(!active())
+  }
+
+
   return (
     <>
     <header>
         <h1 class="title">{props.title}</h1>
         <nav class="navbar">
-            <a href="#" class="toogle-button">
+            <a href="#" onClick={handleToggle} class="toogle-button">
               <span class="bar"></span>
               <span class="bar"></span>
               <span class="bar"></span>
             </a>
             <div class="brand">{props.brand}</div>
-            <div class="navbar-links">
+            <div class={`navbar-links ${active() ? 'active' : ''}`}>
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#tutorials">Tutorials</a></li>
