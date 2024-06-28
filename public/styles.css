@@ -1,5 +1,6 @@
 :root {
   --line-height: 1.6;
+  --primary-color: #f4f4f4;
 }
 
 *:before, 
@@ -22,5 +23,14 @@ html, body {
 body {
   font-family: Arial, sans-serif;
   line-height: var(--line-height);
+  background-color: var(--primary-color);
+}
+
+
+div#app {
+  text-align: center;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100dvh;
 }
 

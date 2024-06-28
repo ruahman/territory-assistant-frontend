@@ -1,9 +1,9 @@
-import LandingLayout from '@src/layouts/landing-layout';
+import MainLayout from '@src/layouts/main';
 
 export default function () {
   return (
-    <LandingLayout 
-      title="Puerto Rico North West Territory Assistant" 
-      brand="Territoy Assistant" />
+    <MainLayout 
+      headline="Puerto Rico North West Territory Assistant" 
+      title="Territoy Assistant" />
   )
 }
