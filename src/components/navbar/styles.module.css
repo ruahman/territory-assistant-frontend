@@ -1,0 +1,38 @@
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  display: none;
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
+
+.toogle {
+}
+
+.links ul {
+  margin: 0; 
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.links li {
+  list-style: none;
+}
+
+.links li a {
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 1rem;
+  display: block;
+}
+
+.links li a:hover {
+  background-color: #555;
+}
