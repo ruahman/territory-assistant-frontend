@@ -1,5 +1,5 @@
 import Navbar from '@src/components/navbar/index'
-import '@src/layouts/main.css'
+import styles from './styles.module.css'
 
 type Props = {
   headline: string
@@ -9,19 +9,19 @@ type Props = {
 export default function (props: Props) {
 
   return [
-    <header>
+    <header class={styles.layout}>
         <h1>{props.headline}</h1>
         <Navbar title={props.title} />
     </header>,
     
-    <main>
+    <main class={styles.layout}>
         <section id="home">
             <h2>Welcome</h2>
             <p>This is the territory assistant for the PR North West congregation.</p>
         </section>
     </main>,
 
-    <footer>
+    <footer class={styles.layout}>
         <h2>Our Team</h2>
         <p>&copy; 2024 My Website</p>
     </footer>

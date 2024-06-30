@@ -12,7 +12,9 @@
   margin: 0.5rem;
 }
 
-.toogle {
+.toogle img {
+  width: 2rem;
+  height: auto;
 }
 
 .links ul {

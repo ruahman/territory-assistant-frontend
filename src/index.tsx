@@ -1,10 +1,9 @@
 /* @refresh reload */
 import { render } from 'solid-js/web'
 
-import { LandingPage } from './App'
+import { LandingPage } from './app'
 
-const page = document.querySelector('meta[name="territory-assistant-page"]')?.getAttribute('content');
-console.log(page);
+const page = document.querySelector('meta[name="page"]')?.getAttribute('content');
 
 const main = document.querySelector('#app')
 

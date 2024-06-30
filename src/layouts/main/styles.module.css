@@ -4,32 +4,14 @@
   --text-color: #fff;
 }
 
-header {
+header.layout {
   background-color: var(--secondary-color);
   color: var(--text-color);
   padding: 1rem 0;
   text-align: center;
 }
 
-.toogle-button {
-  position: absolute;
-  top: 0.75rem;
-  right: 1rem;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 3rem;
-  height: 2rem;
-}
-
-.toogle-button .bar {
-  height: 3px;
-  width: 100%;
-  background-color: var(--text-color);
-  border-radius: 10px;
-}
-
-section {
+main.layout > section {
   padding: 20px;
   margin: 20px;
   background-color: #fff;
@@ -37,18 +19,11 @@ section {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-section h2 {
+main.layout > section > h2 {
   color: #333;
 }
 
-
-ul {
-  list-style-type: square;
-  padding-left: 20px;
-}
-
-
-footer {
+footer.layout {
   width: 100%;
   background-color: var(--secondary-color);
   color: var(--text-color);

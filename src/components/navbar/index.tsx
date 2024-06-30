@@ -8,9 +8,7 @@ export default function(props: Props){
   return ( 
     <nav class={styles.navbar}>
         <button class={styles.toogle}>
-          <span class="material-symbols-outlined">
-            menu
-          </span>
+          <img src="/img/menu.svg" alt="menu" />
         </button>
         <h3 class={styles.title}>{props.title}</h3>
         <div class={styles.links}>

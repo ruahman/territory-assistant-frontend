@@ -26,13 +26,6 @@ body {
   background-color: var(--primary-color);
 }
 
-button {
-  cursor: pointer;
-  background: none;
-  border: none;
-}
-
-
 div#app {
   text-align: center;
   display: grid;
