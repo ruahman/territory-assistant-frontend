@@ -12,19 +12,23 @@
   margin: 0.5rem;
 }
 
-.toogle img {
+.toogle {
+  display: none;
+}
+
+.toogle > img {
   width: 2rem;
   height: auto;
 }
 
-.links ul {
+.links > ul {
   margin: 0; 
   padding: 0;
   display: flex;
   flex-direction: row;
 }
 
-.links li {
+.links > ul > li {
   list-style: none;
 }
 
@@ -37,4 +41,35 @@
 
 .links li a:hover {
   background-color: #555;
+}
+
+@media (max-width: 700px) {
+  .title {
+    display: block;
+  }
+  .navbar {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    /* justify-content: center; */
+  }
+  .toogle {
+    display: block;
+  }
+  .links {
+    display: none;
+    width: 100%;
+  }
+  .links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  .links.active {
+    display: flex;
+  }
 }
