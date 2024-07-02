@@ -7,9 +7,10 @@ type Props = {
 export default function(props: Props){
   return ( 
     <nav class={styles.navbar}>
-        <button class={styles.toogle}>
-          <img src="/img/menu.svg" alt="menu" />
-        </button>
+        <label class={styles.label} for={styles.toogle}>
+            <img src="/img/menu.svg" alt="menu" />
+        </label>
+        <input type="checkbox" id={styles.toogle}></input>
         <h3 class={styles.title}>{props.title}</h3>
         <div class={styles.links}>
             <ul>
