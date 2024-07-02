@@ -16,7 +16,7 @@
   display: none;
 }
 
-.label > img {
+.label img {
   width: 2rem;
   height: auto;
   display: none;
@@ -26,14 +26,14 @@
   background-color: var(--secondary-color);
 }
 
-.links > ul {
+.links ul {
   margin: 0; 
   padding: 0;
   display: flex;
   flex-direction: row;
 }
 
-.links > ul > li {
+.links li {
   list-style: none;
 }
 
@@ -62,24 +62,28 @@
   .navbar {
     justify-content: flex-start;
   }
+
   .toogle {
     display: block;
   }
+
   .links {
     display: none;
     position: absolute;
     top: 5rem;
     width: 100%;
   }
+
   .links ul {
     flex-direction: column;
     width: 100%;
   }
+
   .links.active {
     display: flex;
   }
 
-  .label > img {
+  .label img {
     display: block;
   }
 
