@@ -18,7 +18,7 @@ export default function(props: Props){
                 <li><a href="#tutorials">Tutorials</a></li>
                 <li><a href="#help">Help</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <button>Log In</button>
+                <li><a href="#login" id={styles.login}>Log In</a></li>
             </ul>
         </div>
     </nav>
