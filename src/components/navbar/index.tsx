@@ -1,11 +1,16 @@
 import styles from './styles.module.css'
+import {LoginModal, openLoginModal} from '../login_modal/index.tsx'
 
 type Props = {
   title: string 
 }
 
+function handleClick(){
+  openLoginModal()
+}
+
 export default function(props: Props){
-  return ( 
+  return [
     <nav class={styles.navbar}>
         <label class={styles.label} for={styles.toogle}>
             <img src="/img/menu.svg" alt="menu" />
@@ -18,9 +23,10 @@ export default function(props: Props){
                 <li><a href="#tutorials">Tutorials</a></li>
                 <li><a href="#help">Help</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#login" id={styles.login}>Log In</a></li>
+                <li><a href="#login" id={styles.login} onClick={handleClick}>Log In</a></li>
             </ul>
         </div>
-    </nav>
-  )
+    </nav>,
+    <LoginModal></LoginModal>
+  ]
 }

@@ -1,15 +1,23 @@
 import {Portal} from 'solid-js/web';
-import {JSX} from 'solid-js';
+import {ParentProps} from 'solid-js';
 
-type Props = {
-  content: JSX.Element
+let dialog: HTMLDialogElement;
+
+export function openModal(){
+  dialog.showModal();
 }
 
-export default function(props: Props){
+export function closeModal(){
+  dialog.close();
+}
+
+type Props = ParentProps
+
+export function Modal(props: Props){
   
   return (
     <Portal>
-      <dialog>{props.content}</dialog>
+      <dialog ref={dialog}>{props.children}</dialog>
     </Portal>
   )
 }
