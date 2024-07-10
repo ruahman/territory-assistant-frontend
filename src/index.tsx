@@ -1,7 +1,7 @@
 /* @refresh reload */
 import { render } from 'solid-js/web';
 
-import { LandingPage } from './app';
+import { LandingPage } from './App';
 
 const page = document
   .querySelector('meta[name="page"]')
