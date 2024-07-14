@@ -2,6 +2,7 @@ import { createContext, useContext, ParentProps } from 'solid-js';
 import { createStore } from 'solid-js/store';
 import en from '@src/languages/en';
 import es from '@src/languages/es';
+import { clone } from '@src/utils';
 
 const I18nContext = createContext();
 
@@ -17,19 +18,21 @@ export function I18nProvider(props: Props) {
   let l: Store;
 
   if (t === 'en') {
-    l = en;
+    l = clone(en) as Store;
   } else if (t === 'es') {
-    l = es;
+    l = clone(es) as Store;
   } else {
-    l = en;
+    l = clone(en) as Store;
   }
 
   const [store, setStore] = createStore<Store>(l);
 
   const setLanguage = (lang: string) => {
     if (lang === 'en') {
+      console.log(`en: ${JSON.stringify(en)}`);
       setStore(en);
     } else if (lang === 'es') {
+      console.log(`es: ${JSON.stringify(es)}`);
       setStore(es);
     }
   };

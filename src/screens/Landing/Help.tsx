@@ -4,8 +4,8 @@ export default function () {
   const [language] = useI18n();
   return (
     <section>
-      <h2>{language.home_header}</h2>
-      <p>{language.home_paragraph}</p>
+      <h2>{language.help_header}</h2>
+      <p>{language.help_paragraph}</p>
     </section>
   );
 }

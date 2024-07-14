@@ -1,16 +1,28 @@
-import { createSignal } from 'solid-js';
+import { createSignal, JSXElement, For } from 'solid-js';
 import styles from './styles.module.css';
 import Login from '../Login';
+import { useI18n } from '@src/context/i18n';
 
 type Props = {
   title: string;
+  links: JSXElement[];
 };
 
 export default function (props: Props) {
   const [login, setLogin] = createSignal(false);
 
+  const [language, setLanguage] = useI18n();
+
   function handleClick() {
     setLogin(true);
+  }
+
+  function enClick() {
+    setLanguage('en');
+  }
+
+  function esClick() {
+    setLanguage('es');
   }
 
   return [
@@ -22,21 +34,13 @@ export default function (props: Props) {
       <h3 class={styles.title}>{props.title}</h3>
       <div class={styles.links}>
         <ul>
+          <For each={props.links}>{(item) => <li>{item}</li>}</For>
           <li>
-            <a href="#home">Home</a>
-          </li>
-          <li>
-            <a href="#tutorials">Tutorials</a>
-          </li>
-          <li>
-            <a href="#help">Help</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
+            <a onClick={enClick}>en</a>|<a onClick={esClick}>es</a>
           </li>
           <li>
             <a href="#login" id={styles.login} onClick={handleClick}>
-              Log In
+              {language.login}
             </a>
           </li>
         </ul>
