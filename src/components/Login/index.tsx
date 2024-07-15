@@ -1,52 +1,26 @@
-import { createEffect, Accessor, Setter, onMount, onCleanup } from 'solid-js';
-import Modal from '../Modal';
+import { useModal } from '../Modal';
 import styles from './styles.module.css';
 
-type Props = {
-  login: Accessor<boolean>;
-  setLogin: Setter<boolean>;
-};
+export function useLogin() {
+  const { openModal, closeModal, Modal } = useModal();
 
-export default function (props: Props) {
-  let modalRef: HTMLDialogElement | undefined;
-  let loginRef: HTMLDivElement | undefined;
-
-  const { login, setLogin } = props;
-
-  createEffect(() => {
-    if (login()) {
-      modalRef?.showModal();
-    } else {
-      modalRef?.close();
-    }
-  });
-
-  function close() {
-    setLogin(false);
+  function handleClose() {
+    closeModal();
   }
 
-  const handleClickOutside = (event: MouseEvent) => {
-    if (!loginRef?.contains(event.target as Node)) {
-      close();
-    }
+  return {
+    openLogin: openModal,
+    closeLogin: closeModal,
+    Login: () => {
+      return (
+        <Modal>
+          <a href="#" class={styles.close} onClick={handleClose}>
+            <img src="/img/close.svg" alt="menu" />
+          </a>
+          <h1>Login</h1>
+          <p>login or create an account</p>
+        </Modal>
+      );
+    },
   };
-
-  onMount(() => {
-    document.addEventListener('mousedown', handleClickOutside);
-  });
-
-  onCleanup(() => {
-    document.removeEventListener('mousedown', handleClickOutside);
-  });
-
-  return (
-    <Modal ref={modalRef}>
-      <div ref={loginRef!}>
-        <a href="#" class={styles.close} onClick={close}>
-          <img src="/img/close.svg" alt="menu" />
-        </a>
-        <h1>Login</h1>
-      </div>
-    </Modal>
-  );
 }

@@ -1,19 +1,50 @@
 import { Portal } from 'solid-js/web';
-import { ParentProps } from 'solid-js';
+import { createSignal, createEffect, ParentProps } from 'solid-js';
 import styles from './styles.module.css';
 
-type Props = ParentProps & {
-  ref: HTMLDialogElement | undefined;
-};
+export function useModal() {
+  let [show, setShow] = createSignal(false);
+  let ref: HTMLDialogElement | undefined;
 
-export default function (props: Props) {
-  let { ref, children } = props;
+  createEffect(() => {
+    if (show()) {
+      ref?.showModal();
+    } else {
+      ref?.close();
+    }
+  });
 
-  return (
-    <Portal>
-      <dialog id={styles.modal} ref={ref}>
-        {children}
-      </dialog>
-    </Portal>
-  );
+  function openModal() {
+    setShow(true);
+  }
+
+  function closeModal() {
+    setShow(false);
+  }
+
+  function handleClick(e: MouseEvent) {
+    let dialogRect = ref?.getBoundingClientRect();
+
+    // if outside
+    if (
+      e.clientX > dialogRect?.right! ||
+      e.clientX < dialogRect?.left! ||
+      e.clientY > dialogRect?.bottom! ||
+      e.clientY < dialogRect?.top!
+    ) {
+      setShow(false);
+    }
+  }
+
+  return {
+    openModal,
+    closeModal,
+    Modal: (props: ParentProps) => (
+      <Portal>
+        <dialog id={styles.modal} ref={ref} onClick={handleClick}>
+          {props.children}
+        </dialog>
+      </Portal>
+    ),
+  };
 }

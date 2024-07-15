@@ -1,6 +1,6 @@
-import { createSignal, JSXElement, For } from 'solid-js';
+import { JSXElement, For } from 'solid-js';
 import styles from './styles.module.css';
-import Login from '../Login';
+import { useLogin } from '../Login';
 import { useI18n } from '@src/context/i18n';
 
 type Props = {
@@ -9,12 +9,12 @@ type Props = {
 };
 
 export default function (props: Props) {
-  const [login, setLogin] = createSignal(false);
+  let { openLogin, Login } = useLogin();
 
   const [language, setLanguage] = useI18n();
 
   function handleClick() {
-    setLogin(true);
+    openLogin();
   }
 
   function enClick() {
@@ -46,6 +46,6 @@ export default function (props: Props) {
         </ul>
       </div>
     </nav>,
-    <Login login={login} setLogin={setLogin}></Login>,
+    <Login />,
   ];
 }
