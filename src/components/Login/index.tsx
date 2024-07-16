@@ -14,11 +14,13 @@ export function useLogin() {
     Login: () => {
       return (
         <Modal>
-          <a href="#" class={styles.close} onClick={handleClose}>
-            <img src="/img/close.svg" alt="menu" />
-          </a>
-          <h1>Login</h1>
-          <p>login or create an account</p>
+          <div id={styles.login}>
+            <h1>Login</h1>
+            <p>login or create an account</p>
+            <button class={styles.close} onClick={handleClose}>
+              &times;
+            </button>
+          </div>
         </Modal>
       );
     },

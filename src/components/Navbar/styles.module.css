@@ -36,9 +36,11 @@
 
 .links li {
   list-style: none;
+  line-height: 3rem;
 }
 
 .links li a {
+  cursor: pointer;
   text-decoration: none;
   color: var(--text-color);
   padding: 1rem;
@@ -50,12 +52,13 @@
 }
 
 #login {
+  cursor: pointer;
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  /* padding: 0.5rem 1rem; */
-  /* border: none; */
-  border-radius: 0.5rem;
-  /* cursor: pointer; */
+  border-radius: 12px;
+  outline: none;
+  padding: 1rem;
+  font-weight: bold;
 }
 
 @media (max-width: 800px) {

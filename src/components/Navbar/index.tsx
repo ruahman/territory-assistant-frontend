@@ -39,9 +39,9 @@ export default function (props: Props) {
             <a onClick={enClick}>en</a>|<a onClick={esClick}>es</a>
           </li>
           <li>
-            <a href="#login" id={styles.login} onClick={handleClick}>
+            <button id={styles.login} onClick={handleClick}>
               {language.login}
-            </a>
+            </button>
           </li>
         </ul>
       </div>
