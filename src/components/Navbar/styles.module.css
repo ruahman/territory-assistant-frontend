@@ -59,6 +59,7 @@
   outline: none;
   padding: 1rem;
   font-weight: bold;
+  text-transform: capitalize;
 }
 
 @media (max-width: 800px) {

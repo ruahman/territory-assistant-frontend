@@ -9,6 +9,7 @@ header.layout {
   color: var(--text-color);
   padding: 1rem 0;
   text-align: center;
+  text-transform: capitalize;
 }
 
 main.layout > section {

@@ -1,7 +1,7 @@
-import LandingScreen from '@src/screens/Landing';
+import LandingScreens from '@src/screens/Landing';
 
 export function Landing() {
-  return <LandingScreen />;
+  return <LandingScreens />;
 }
 
 export function Admin() {

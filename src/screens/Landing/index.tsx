@@ -9,7 +9,7 @@ import Contact from './Contact';
 
 type Props = ParentProps;
 
-function Root(props: Props) {
+function Layout(props: Props) {
   const [language] = useI18n();
 
   return [
@@ -37,7 +37,7 @@ function Root(props: Props) {
 export default function () {
   return (
     <I18nProvider>
-      <Router root={Root}>
+      <Router root={Layout}>
         <Route path="/" component={Home} />
         <Route path="/help" component={Help} />
         <Route path="/contact" component={Contact} />
