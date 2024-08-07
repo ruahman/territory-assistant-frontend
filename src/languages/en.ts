@@ -2,6 +2,7 @@ export default {
   header: 'puerto rico north west english territory assistant',
   title: 'territory assistant',
   login: 'log in',
+  signup: 'sign up',
   home_title: 'home',
   home_header: 'Welcome',
   home_paragraph:

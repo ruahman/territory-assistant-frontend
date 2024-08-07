@@ -9,10 +9,9 @@ header.layout {
   color: var(--text-color);
   padding: 1rem 0;
   text-align: center;
-  text-transform: capitalize;
 }
 
-main.layout > section {
+main.layout>section {
   padding: 20px;
   margin: 20px;
   background-color: #fff;
@@ -20,7 +19,7 @@ main.layout > section {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-main.layout > section > h2 {
+main.layout>section>h2 {
   color: #333;
 }
 

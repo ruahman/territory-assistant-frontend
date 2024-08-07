@@ -2,6 +2,7 @@ export default {
   header: 'asistente territorio noroeste de puerto rico en inglés',
   title: 'territorio asistente',
   login: 'iniciar la sesión',
+  signup: 'inscribirse',
   home_title: 'case',
   home_header: 'bienvenido',
   home_paragraph:

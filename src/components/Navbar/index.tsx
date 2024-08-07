@@ -40,6 +40,11 @@ export default function (props: Props) {
           </li>
           <li>
             <button id={styles.login} onClick={handleClick}>
+              {language.signup}
+            </button>
+          </li>
+          <li>
+            <button id={styles.login} onClick={handleClick}>
               {language.login}
             </button>
           </li>
